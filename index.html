@@ -1,110 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swathe Waitlist</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        .waitlist-section {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .waitlist-section h2 {
-            margin-top: 0;
-        }
-        .form-group {
-            margin-bottom: 10px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        .form-group textarea {
-            resize: vertical;
-        }
-        button[type="submit"] {
-            background-color: #5cb85c;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button[type="submit"]:hover {
-            background-color: #4cae4c;
-        }
-    </style>
-</head>
-<body>
-    <div class="waitlist-section">
-        <h1>Join the waitlist for <br>swathe</h1>
-        <form>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swathe - Sustainable Fashion Swapping</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400&family=Roboto+Slab:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="page-container">
+      <section class="waitlist-section" stackColumnsAt="tablet">
+        <div class="waitlist-content">
+          <div class="column">
+            <div class="waitlist-container">
+              <div class="waitlist-form-container">
+                <div class="waitlist-header">
+                  <h1 class="waitlist-title">Join the waitlist for</h1>
+                  <p class="brand-name">swathe</p>
+                </div>
+                <form class="waitlist-form" id="waitlistForm" novalidate>
+                  <div
+                    class="form-feedback"
+                    id="formFeedback"
+                    aria-live="polite"
+                  ></div>
+                  <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <div class="input-container">
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Name"
+                        class="form-input"
+                        required
+                        aria-required="true"
+                        minlength="2"
+                      />
+                    </div>
+                    <div class="error-message" id="nameError"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-container">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Email"
+                        class="form-input"
+                        required
+                        aria-required="true"
+                      />
+                    </div>
+                    <div class="error-message" id="emailError"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Any Questions?"
+                      class="form-textarea"
+                    ></textarea>
+                    <div class="error-message" id="messageError"></div>
+                  </div>
+                  <div class="form-submit">
+                    <button
+                      type="submit"
+                      class="submit-button"
+                      id="submitButton"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="preview-container">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff24d38b635304360b91a363e298fcbd0%2F794651629fd64b7a86bd9c5a46a5da30"
+                  alt="Homepage preview"
+                  class="preview-image"
+                />
+              </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="questions">Any Questions?</label>
-                <textarea id="questions" name="questions"></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+          </div>
+        </div>
+      </section>
 
-    <div>
-        <h2>Learn about swathe</h2>
-        <h3>What is Swathe?</h3>
-        <p>Swathe empowers students to redefine their relationship with fashion. By renting or swapping clothing within your community, you can express your style, reduce textile waste, and save money—all while supporting sustainable practices [1].</p>
-        <h3>Why swap?</h3>
-        <ul>
-            <li>Keep clothes out of landfill [1]</li>
-            <li>Swap Local [1]</li>
-            <li>Extend clothing life [1]</li>
-        </ul>
-        <h3>How to swap?</h3>
-        <h4>Easy as Browse, Borrow, and Return [1]</h4>
-        <h4>Step One: Browse Your Area & Find Your Item [2]</h4>
-        <p>Search for items available in your local community. Use filters to find clothing based on size, type, or occasion. Once you find something you like, check the item's details, including the condition, owner's notes, and whether it’s available for rent or swap [2].</p>
-        <h4>Step Two: Send a Swap Offer [2]</h4>
-        <p>Reach out to the owner through the platform to request the item or propose a swap with something you own [2].</p>
-        <h4>Step Four: Enjoy Your Outfit! [2]</h4>
-        <p>Use the item for your event or daily wear while adhering to the owner’s care instructions [2].</p>
-        <h4>Step Five: Follow Return Instructions [3]</h4>
-        <p>Check the owner’s description to see if cleaning is required before returning the item [3].</p>
-        <h4>Step Six: Use the Preset Drop Off Location [3]</h4>
-        <p>Return the item to the agreed-upon location set during the initial messaging exchange [3].</p>
-        <h3>Sustainability Impact [3]</h3>
-        <p>Swathe helps reduce textile waste and supports sustainable practices [1].</p>
-        <h3>Help Centre [3]</h3>
-        <p>(Link to Help Centre would go here)</p>
-    </div>
-</body>
+      <section class="about-banner">
+        <h2 class="about-banner-title">Learn about Swathe</h2>
+      </section>
+
+      <section class="what-is-section">
+        <h2 class="section-title">What is Swathe?</h2>
+        <p class="section-description">
+          Swathe empowers students to redefine their relationship with fashion.
+          By renting or swapping clothing within your community, you can express
+          your style, reduce textile waste, and save money—all while supporting
+          sustainable practices.
+        </p>
+      </section>
+
+      <section class="why-swap-section">
+        <h2 class="section-title">Why swap?</h2>
+        <div class="benefits-container">
+          <article class="benefit-card">
+            <div class="benefit-image-container">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/6db6b8388f36a58f96d1b218cbb563fd5dc01067"
+                alt="Keep clothes out of landfill"
+                class="benefit-image"
+              />
+            </div>
+            <h3 class="benefit-title">Keep clothes out of landfill</h3>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-image-container">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/12bd7d306a686264bb6fca38030151aae0117b60"
+                alt="Swap Local"
+                class="benefit-image"
+              />
+            </div>
+            <h3 class="benefit-title">Swap Local</h3>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-image-container">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/5df2d88d474fd3c890d1ef74daf6d2f29238a6ac"
+                alt="Extend clothing life"
+                class="benefit-image"
+              />
+            </div>
+            <h3 class="benefit-title">Extend clothing life</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="how-to-swap-section">
+        <div class="how-to-header">
+          <h2 class="section-title">How to swap?</h2>
+          <p class="section-subtitle">Easy as Browse, Borrow, and Return</p>
+        </div>
+        <div class="steps-container">
+          <article class="step-item">
+            <h3 class="step-title">
+              Step One: Browse Your Area , Find Your Item
+            </h3>
+            <p class="step-description">
+              Search for items available in your local community. Use filters to
+              find clothing based on size, type, or occasion. Once you find
+              something you like, check the item's details, including the
+              condition, owner's notes, and whether it's available for rent or
+              swap.
+            </p>
+          </article>
+          <article class="step-item">
+            <h3 class="step-title">Step Two: Send a Swap Offer</h3>
+            <p class="step-description">
+              Reach out to the owner through the platform to request the item or
+              propose a swap with something you own.
+            </p>
+          </article>
+          <article class="step-item">
+            <h3 class="step-title">Step Four: Enjoy Your Outfit!</h3>
+            <p class="step-description">
+              Use the item for your event or daily wear while adhering to the
+              owner's care instructions.
+            </p>
+          </article>
+          <article class="step-item">
+            <h3 class="step-title">Step Five: Follow Return Instructions</h3>
+            <p class="step-description">
+              Check the owner's description to see if cleaning is required
+              before returning the item.
+            </p>
+          </article>
+          <article class="step-item">
+            <h3 class="step-title">
+              Step Six: Use the Preset Drop Off Location
+            </h3>
+            <p class="step-description">
+              Return the item to the agreed-upon location set during the initial
+              messaging exchange.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (() => {
+        const state = {};
+
+        let context = null;
+        let nodesToDestroy = [];
+        let pendingUpdate = false;
+
+        function destroyAnyNodes() {
+          // destroy current view template refs before rendering again
+          nodesToDestroy.forEach((el) => el.remove());
+          nodesToDestroy = [];
+        }
+
+        // Function to update data bindings and loops
+        // call update() when you mutate state and need the updates to reflect
+        // in the dom
+        function update() {
+          if (pendingUpdate === true) {
+            return;
+          }
+          pendingUpdate = true;
+
+          document
+            .querySelectorAll("[stackColumnsAt='tablet']")
+            .forEach((el) => {
+              el.setAttribute("space", 20);
+            });
+
+          destroyAnyNodes();
+
+          pendingUpdate = false;
+        }
+
+        // Update with initial state on first load
+        update();
+      })();
+    </script>
+    <script src="form-handler.js"></script>
+  </body>
 </html>
