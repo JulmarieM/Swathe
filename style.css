@@ -1,0 +1,546 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  background-color: #fff;
+}
+
+/* Page container */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Waitlist section */
+.waitlist-section {
+  padding: 100px;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.waitlist-content {
+  gap: 20px;
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 100%;
+  margin-left: 0px;
+}
+
+.waitlist-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 236px;
+  margin-left: 4px;
+}
+
+.waitlist-form-container {
+  display: flex;
+  width: 411px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.waitlist-header {
+  display: flex;
+  width: 275px;
+  flex-direction: column;
+  align-items: center;
+  gap: -25px;
+}
+
+.waitlist-title {
+  width: 100%;
+  color: #000;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.brand-name {
+  width: 100%;
+  color: #010d3f;
+  font-family: Poppins, sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 100px;
+  letter-spacing: -1.584px;
+}
+
+.waitlist-form {
+  display: flex;
+  min-width: 320px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.form-label {
+  color: #1e1e1e;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.input-container {
+  display: flex;
+  padding: 12px 16px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+}
+
+.form-input {
+  width: 100%;
+  border: none;
+  color: #b3b3b3;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.form-textarea {
+  width: 100%;
+  border: none;
+  color: #b3b3b3;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  min-height: 80px;
+  resize: vertical;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+}
+
+.form-feedback {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  line-height: 150%;
+  display: none;
+}
+
+.form-feedback.success {
+  display: block;
+  background-color: #e6f7e6;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+.form-feedback.error {
+  display: block;
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #c62828;
+}
+
+.error-message {
+  color: #c62828;
+  font-size: 14px;
+  margin-top: 5px;
+  font-family: "Roboto Slab", serif;
+  min-height: 20px;
+}
+
+.input-container.error {
+  border-color: #c62828;
+}
+
+.form-textarea.error {
+  border-color: #c62828;
+}
+
+.form-submit {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+.submit-button {
+  padding: 12px;
+  flex: 1;
+  border-radius: 4px;
+  border: 1px solid #374375;
+  color: #fffcf5;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  cursor: pointer;
+  background-color: #374375;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2a345a;
+}
+
+.submit-button:disabled {
+  background-color: #9da3b9;
+  border-color: #9da3b9;
+  cursor: not-allowed;
+}
+
+.preview-container {
+  width: 1016px;
+  height: 609.6px;
+  border-radius: 8px;
+  border: 10px solid #000;
+  overflow: hidden;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* About banner */
+.about-banner {
+  color: #fffcf5;
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.66px;
+  height: 138px;
+  padding: 10px;
+  align-self: stretch;
+  background-color: #374375;
+  display: flex;
+  align-items: center;
+}
+
+.about-banner-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* What is section */
+.what-is-section {
+  display: flex;
+  padding: 100px;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 50px;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #fff;
+}
+
+.section-title {
+  color: #374375;
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.66px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-description {
+  flex: 1;
+  color: #374375;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.66px;
+}
+
+/* Why swap section */
+.why-swap-section {
+  display: flex;
+  padding: 75px 100px;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 30px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.benefits-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 150px;
+}
+
+.benefit-card {
+  display: flex;
+  width: 268px;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.benefit-image-container {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #6979b9;
+}
+
+.benefit-image {
+  width: 268px;
+  height: 268px;
+  object-fit: cover;
+}
+
+.benefit-title {
+  color: #374375;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.66px;
+}
+
+/* How to swap section */
+.how-to-swap-section {
+  display: flex;
+  padding: 100px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.how-to-header {
+  display: flex;
+  width: 480px;
+  height: 80px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.section-subtitle {
+  color: #374375;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.44px;
+}
+
+.steps-container {
+  display: flex;
+  width: 750px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+}
+
+.step-title {
+  width: 750px;
+  color: #374375;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.44px;
+}
+
+.step-description {
+  width: 750px;
+  color: #374375;
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.352px;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .waitlist-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+
+  .waitlist-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .preview-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .benefits-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .how-to-swap-section {
+    padding: 50px;
+  }
+
+  .steps-container {
+    width: 100%;
+  }
+
+  .step-title,
+  .step-description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .waitlist-section {
+    padding: 50px 20px;
+  }
+
+  .waitlist-form-container {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .waitlist-title {
+    font-size: 20px;
+  }
+
+  .brand-name {
+    font-size: 50px;
+    text-align: center;
+    line-height: 100%;
+  }
+
+  .waitlist-form {
+    min-width: auto;
+  }
+
+  .about-banner {
+    font-size: 25px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+
+  .what-is-section {
+    padding-left: 50px;
+    padding-right: 50px;
+    align-self: stretch;
+    gap: 10px;
+    padding-bottom: 75px;
+    padding-top: 75px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-description {
+    font-size: 15px;
+  }
+
+  .why-swap-section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .benefits-container {
+    gap: 30px;
+  }
+
+  .benefit-card {
+    width: 100%;
+  }
+
+  .benefit-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .benefit-title {
+    font-size: 20px;
+  }
+
+  .how-to-swap-section {
+    padding: 30px;
+  }
+
+  .how-to-header {
+    width: 100%;
+  }
+
+  .section-title,
+  .section-subtitle {
+    text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+  }
+
+  .step-title {
+    text-align: center;
+  }
+
+  .step-description {
+    font-size: 15px;
+    text-align: center;
+  }
+}
